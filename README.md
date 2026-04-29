@@ -3,7 +3,7 @@
 一款跨平台 AI 聊天客户端，使用 Tauri V2 + React 构建，支持 28+ AI 服务提供商。
 
 > [!WARNING]
-> ChatNeo 目前还处于早期阶段，可能会出现一些 bug。
+> ChatNeo 目前还处于早期阶段，暂时只适配了 macOS 平台，可能会出现一些 bug。
 
 ![ChatNeo](docs/public/images/screenshot.png)
 
