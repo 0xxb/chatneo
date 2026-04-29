@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F46E5"/>
+      <stop offset="100%" style="stop-color:#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="bubble1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.95"/>
+      <stop offset="100%" style="stop-color:#E0E7FF;stop-opacity:0.9"/>
+    </linearGradient>
+    <linearGradient id="bubble2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#C7D2FE;stop-opacity:0.5"/>
+    </linearGradient>
+    <linearGradient id="dot" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366F1"/>
+      <stop offset="100%" style="stop-color:#06B6D4"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(256,256) scale(0.88) translate(-256,-256)">
+    <!-- Background rounded square -->
+    <rect x="16" y="16" width="480" height="480" rx="112" ry="112" fill="url(#bg)"/>
+
+    <!-- Back bubble (larger, offset top-right) -->
+    <rect x="175" y="105" width="248" height="165" rx="40" ry="40" fill="url(#bubble2)"/>
+
+    <!-- Front bubble with integrated tail -->
+    <path d="
+      M131 195
+      H307
+      Q349 195 349 237
+      V323
+      Q349 365 307 365
+      H170
+      L120 400
+      L135 365
+      H131
+      Q89 365 89 323
+      V237
+      Q89 195 131 195
+      Z
+    " fill="url(#bubble1)"/>
+
+    <!-- Three dots in front bubble -->
+    <circle cx="168" cy="280" r="18" fill="url(#dot)"/>
+    <circle cx="222" cy="280" r="18" fill="url(#dot)"/>
+    <circle cx="276" cy="280" r="18" fill="url(#dot)"/>
+  </g>
+</svg>

@@ -1,0 +1,84 @@
+[package]
+name = "ChatNeo"
+version = "0.1.0"
+description = "A chat app that supports multiple ai providers."
+authors = ["0xxb"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+# The `_lib` suffix may seem redundant but it is necessary
+# to make the lib name unique and wouldn't conflict with the bin name.
+# This seems to be only an issue on Windows, see https://github.com/rust-lang/cargo/issues/8519
+name = "chatneo_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+glob = "0.3"
+
+[dependencies]
+tauri = { version = "2", features = ["protocol-asset", "macos-private-api", "tray-icon", "image-png"] }
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tauri-plugin-dialog = "2.6.0"
+tauri-plugin-sql = { version = "2.3.2", features = ["sqlite"] }
+tauri-plugin-fs = "2"
+tauri-plugin-autostart = "2"
+tauri-plugin-updater = { version = "2", features = ["rustls-tls"] }
+tauri-plugin-process = "2"
+rusqlite = { version = "0.31", features = ["bundled"] }
+tauri-plugin-http = { version = "2.5.7", features = ["socks"] }
+tauri-plugin-clipboard-manager = "2"
+tauri-plugin-shell = "2"
+tauri-plugin-deep-link = "2"
+tauri-plugin-single-instance = "2"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "chrono"] }
+tracing-appender = "0.2"
+chrono = "0.4"
+reqwest = { version = "0.12", features = ["rustls-tls", "json", "multipart", "stream"], default-features = false }
+scraper = "0.22"
+calamine = "0.26"
+quick-xml = "0.37"
+pdf-extract = "0.7"
+zip = "2"
+whisper-rs = "0.14"
+sherpa-rs = { version = "0.6", features = ["tts"] }
+async-trait = "0.1"
+symphonia = { version = "0.5", features = ["isomp4", "aac", "mp3", "ogg", "pcm", "vorbis", "mkv"] }
+symphonia-codec-vorbis = "0.5"
+opus = "0.3"
+rubato = "0.16"
+futures-util = "0.3"
+tar = "0.4"
+bzip2 = "0.5"
+tokio = { version = "1", features = ["sync", "rt", "process", "time", "io-util", "macros"] }
+uuid = { version = "1", features = ["v4"] }
+url = "2"
+base64 = "0.22"
+percent-encoding = "2.3.2"
+digest_auth = "0.3"
+sqlite-vec = "0.1"
+zerocopy = { version = "0.8", features = ["derive"] }
+
+[target.'cfg(target_os = "macos")'.dependencies]
+objc2 = "0.6"
+objc2-foundation = { version = "0.3", features = ["NSData", "NSError", "NSString"] }
+objc2-app-kit = { version = "0.3", features = ["NSButton", "NSControl", "NSFont", "NSGraphics", "NSProgressIndicator", "NSResponder", "NSTextField", "NSView", "NSWindow"] }
+objc2-web-kit = { version = "0.3", features = ["WKWebView", "WKPDFConfiguration"] }
+block2 = "0.6"
+core-text = "20"
+core-foundation = "0.10"
+
+[target.'cfg(target_os = "windows")'.dependencies]
+webview2-com = "0.38"
+windows = { version = "0.61", features = ["Foundation"] }
+
+
+[target.'cfg(target_os = "linux")'.dependencies]
+webkit2gtk = "2.0"
+gtk = "0.18"
+

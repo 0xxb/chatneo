@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="44" height="44">
+  <defs>
+    <mask id="m">
+      <rect width="44" height="44" fill="white"/>
+      <!-- Divider: cut out front bubble outline to separate from back bubble -->
+      <path d="
+        M8.2 14.25
+        H29.5
+        Q35 14.25 35 19.95
+        V30.45
+        Q35 36.05 29.5 36.05
+        H13
+        L6 39.75
+        L7.5 36.05
+        H8.2
+        Q2.7 36.05 2.7 30.45
+        V19.95
+        Q2.7 14.25 8.2 14.25
+        Z
+      " fill="black"/>
+      <!-- Restore front bubble interior -->
+      <path d="
+        M8.2 15.75
+        H29.5
+        Q33.5 15.75 33.5 19.95
+        V30.45
+        Q33.5 34.55 29.5 34.55
+        H13
+        L7.5 38.75
+        L9 34.55
+        H8.2
+        Q4.2 34.55 4.2 30.45
+        V19.95
+        Q4.2 15.75 8.2 15.75
+        Z
+      " fill="white"/>
+      <circle cx="13" cy="25.15" r="2.2" fill="black"/>
+      <circle cx="18.85" cy="25.15" r="2.2" fill="black"/>
+      <circle cx="24.7" cy="25.15" r="2.2" fill="black"/>
+    </mask>
+  </defs>
+
+  <g mask="url(#m)">
+    <!-- Back bubble -->
+    <rect x="15.5" y="5.75" width="24" height="16" rx="4" ry="4" fill="#000000"/>
+
+    <!-- Front bubble with tail -->
+    <path d="
+      M8.2 15.75
+      H29.5
+      Q33.5 15.75 33.5 19.95
+      V30.45
+      Q33.5 34.55 29.5 34.55
+      H13
+      L7.5 38.75
+      L9 34.55
+      H8.2
+      Q4.2 34.55 4.2 30.45
+      V19.95
+      Q4.2 15.75 8.2 15.75
+      Z
+    " fill="#000000"/>
+  </g>
+</svg>
