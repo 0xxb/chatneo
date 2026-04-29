@@ -16,7 +16,6 @@ dependencies = [
  "core-text",
  "digest_auth",
  "futures-util",
- "glob",
  "gtk",
  "objc2",
  "objc2-app-kit",
