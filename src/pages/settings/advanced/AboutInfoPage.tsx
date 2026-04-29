@@ -8,7 +8,7 @@ import { getVersion } from '@tauri-apps/api/app';
 import { invoke } from '@tauri-apps/api/core';
 import { useTauriEvent } from '../../../hooks/useTauriEvent';
 
-const EMAIL = 'nicexiaobing@gmail.com';
+const EMAIL = 'support@huohuastudio.com';
 const WEBSITE = 'https://chatneo.app';
 const WEBSITE_LABEL = 'chatneo.app';
 const GITHUB = 'https://github.com/0xxb/chatneo';

@@ -41,7 +41,7 @@ export default defineConfig({
     ],
 
     footer: {
-      copyright: `All rights reserved © 2026 ChatNeo`
+      copyright: `All rights reserved © 2026 <a href="https://huohuastudio.com" target="_blank">ChatNeo</a>`
     },
 
     search: {
